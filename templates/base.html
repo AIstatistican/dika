@@ -1,0 +1,185 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://db.onlinewebfonts.com/c/4155571407c419f8dacc44846fbe2e79?family=Acta+Display+W04+ExtraBold" rel="stylesheet" type="text/css"/>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome for icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <title>Document</title>
+
+    <style>
+      /* Custom CSS for hoverable menu */
+      .hoverable-menu .dropdown-menu {
+        display: none;
+      }
+      .hoverable-menu:hover .dropdown-menu {
+        display: block;
+      }  
+
+      .slides {
+        display: flex;
+        overflow-x: auto;
+        overflow-x: auto;
+      }
+      .slides > div {
+        display: flex;
+        flex-shrink: 0;
+        width: 100%;
+        height: 300px;
+        scroll-snap-align: start;
+        scroll-behavior: smooth;
+        background: #74ABE2;
+        justify-content: center;
+        align-items: center;
+        font-size: 100px;
+      }
+      .custom-font-size{
+        font-size: 4rem;
+        
+      }
+
+      .search-btn {
+      background-color: #AB0033;
+      border: 1px solid #AB0033;
+      color: white;
+    }
+    .search-btn:hover {
+      background-color: #FFFFFF;
+      border: 1px solid #AB0033;
+      color: #AB0033;
+    } 
+    
+    body, h1, h5, .navbar-nav a, .dropdown-menu a, .form-control, .btn, a, ul, li, p {
+        font-family: 'Arial', 'Helvetica', sans-serif;
+    }
+      
+    </style>
+</head>
+<body style="color:white;">
+  
+
+    <div class="container-fluid" style="background-color: #AB0033;">
+      <div class="container" style="padding-top: 10px; padding-bottom: 10px;">
+        <div class="row align-items-center"> <!-- Center align items vertically -->
+          <div class="col-lg-3 col-md-4 col-sm-6">
+            <img src="{% static 'img/logo.png' %}" alt="Bootstrap" class="img-fluid"> <!-- Use img-fluid for responsive images -->
+          </div>
+          <div class="col-lg-6 col-md-8 col-sm-6">
+            <h1 class="fs-1 text-white">Dijital kardiyoloji derneği</h1>
+          </div>
+         
+          <div class="col-lg-3"> <!-- Adjust column sizes based on your design -->
+            <div class="row mt-2" >
+              {% if user.is_authenticated %}
+              <div class="col-md-6" >
+                <p style="color: rgba(255, 255, 255, 0.8);font-size:1rem;"   href="" >
+                    Hoşgeldin <br>  {{user.get_full_name | title}} 
+                </p>
+            </div>
+            <div class="col-md-4">
+                <a href="{% url 'accounts:logout' %}"  style="color:rgba(255, 255, 255, 0.8);font-size: 1rem;">
+                    Çıkış yap
+                </a>
+            </div> 
+                {% else %}  
+            
+              <div class="col-md-3" >
+                  <a style="color: rgba(255, 255, 255, 0.8);font-size:1.5rem;"   href="{% url 'accounts:Login' %}" >
+                      Giriş
+                  </a>
+              </div>
+              <div class="col-md-4">
+                  <a href="{% url 'accounts:contact_view' %}"  style="color:rgba(255, 255, 255, 0.8);font-size: 1.4rem;">
+                      Üye ol
+                  </a>
+              </div>
+                {% endif %}
+          </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    
+
+
+<div class="container-fluid" style="background-color: #AB0033; margin-top: 30px;">
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #AB0033;">
+      <a class="navbar-brand" href="/">
+        <i class="bi bi-house-door-fill"></i> Anasayfa
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <li class="nav-item dropdown hoverable-menu">
+            <a class="nav-link dropdown-toggle" href="#" id="duyurularDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: white;">
+              Hakkında
+            </a>
+            <div class="dropdown-menu" aria-labelledby="duyurularDropdown" style="margin-top: 0px;">
+              <a class="dropdown-item" href="{% url 'amacimiz view' %}" >Amacımız</a>
+              <a class="dropdown-item" href="{% url 'yonetim view' %}" >Yönetim kurulu</a>
+              <a class="dropdown-item" href="{% url 'bilim kurulu' %}" >Bilim kurulu</a>
+            </div>
+          </li>
+          
+          <li class="nav-item dropdown hoverable-menu">
+            <a class="nav-link dropdown-toggle" href="#" id="duyurularDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: white;">
+              Duyurular
+            </a>
+            <div class="dropdown-menu" aria-labelledby="duyurularDropdown" style="margin-top: 0px;">
+              <a class="dropdown-item" href="#" >Bizden haberler</a>
+              <a class="dropdown-item" href="{% url 'toplanti' %}" >Kongre ve toplantı</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown hoverable-menu">
+            <a class="nav-link dropdown-toggle" href="#" id="altGruplarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: white;">
+              Alt gruplar
+            </a>
+            <div class="dropdown-menu" aria-labelledby="altGruplarDropdown" style="margin-top: 0px;">
+              <a class="dropdown-item" href="#" >AI (Yapay zeka)</a>
+              <a class="dropdown-item" href="#" >Biyoistatistik</a>
+              <a class="dropdown-item" href="#" >Aritmi</a>
+              <a class="dropdown-item" href="#" >Görüntüleme</a>
+              <a class="dropdown-item" href="#" >Kalp yetmezliği</a>
+              <a class="dropdown-item" href="#" >Konjenital</a>
+            </div>
+          </li>
+          <a class="nav-link" href="{% url 'iletisim view' %}" aria-disabled="true" style="color: white;">İletişim</a>
+        </div>
+        <form class="form-inline ml-auto">
+          <input class="form-control mr-sm-2" type="search" placeholder="" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+  </div>
+</div>
+
+      {% block body %}
+
+      {% endblock %}
+
+  
+  
+  
+  
+        <!-- Bootstrap JS and jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

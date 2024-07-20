@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+
+
+{% load static %}
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Card</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .news-category {
+            color: #d9534f;
+            font-weight: bold;
+        }
+        .news-title {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        .news-subtitle {
+            color: #6c757d;
+        }
+        .author-info img {
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+    {% block body %}
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-body">
+                <p class="news-category mb-1">NEWS <span class="text-muted">&gt; Daily News</span></p>
+                <h1 class="news-title">Private Equity Interest in Cardiology Has Spiked in Recent Years</h1>
+                <p class="news-subtitle">Though it’s too early to tell what the impact will be, there are concerns about increasing costs and declining quality of care.</p>
+                <div class="d-flex align-items-center mt-4">
+                    <div class="author-info mr-3">
+                        <img src="path/to/author_image.jpg" alt="Author Image">
+                    </div>
+                    <div>
+                        <p class="mb-0">by <strong>Todd Neale</strong></p>
+                        <p class="text-muted mb-0">JULY 03, 2024</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+
+
+
+  
+
+  {% endblock %}

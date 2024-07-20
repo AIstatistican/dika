@@ -1,0 +1,11 @@
+<!-- contact_form.html -->
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <div class="row mb-3">
+        <div class="col-md-12 d-flex justify-content-end">
+            <button type="submit" class="btn btn-primary">Gönder</button>
+        </div>
+    </div>
+</form>
+

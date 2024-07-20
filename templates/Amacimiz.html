@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome for icons (optional) -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://db.onlinewebfonts.com/c/4155571407c419f8dacc44846fbe2e79?family=Acta+Display+W04+ExtraBold" rel="stylesheet" type="text/css"/>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <title>Document</title>
+
+  {% block body %}
+
+<style>
+
+    body, h1, h2, h5, p, .navbar-nav a, .dropdown-menu a, .form-control {
+        font-family: 'Arial', sans-serif;
+    }
+</style>
+</style>
+
+<div class="container" style="margin-top: 2rem;">
+    <div class="row">
+
+        <div class="jumbotron bg-dark">
+            <div class="container text-center">
+              <img src="{% static 'img/logo2.png' %}" alt="Profil Resmi" class="avatar">
+              <div style="margin-top: 2rem;">
+              <h1 class="display-4">Dijital Kardiyoloji derneği</h1>
+              <h2 class="lead" style="font-size: 2rem;">Dernek amacımız</h2>
+              <div style="margin-top: 2rem;">
+                    <p style="color:beige;" class="fs-3 text-justify">
+                    
+                        Dijital Kardiyoloji isimli derneğimiz, kardiyoloji alanında klinik araştırmalar, yöntem bilimi, biyoistatistik, makine öğrenmesi, yapay zeka ve dijital teknolojiler konularında hekimleri bilgilendirmek ve bu alanlarda eğitim programları düzenlemek amacıyla kurulmuştur.
+
+                        Derneğimiz, kardiyoloji uzmanlarının en güncel ve etkili tedavi yöntemlerini kullanabilmesi için sürekli mesleki gelişimlerine katkıda bulunmayı hedefler. Bu kapsamda, yenilikçi teknolojilerin ve dijital dönüşümün kardiyoloji uygulamalarına entegrasyonunu teşvik ederek, hekimlerin bilgi ve becerilerini artırmak için çeşitli eğitim programları ve seminerler düzenlemekteyiz.
+                        
+                        Aynı zamanda toplumun kardiyovasküler sağlığına dair farkındalığını artırmak ve doğru bilgilendirmek de derneğimizin öncelikleri arasındadır. Kardiyovasküler hastalıkların önlenmesi, erken teşhisi ve tedavisi konusunda kamuoyunu bilinçlendirmek amacıyla çalışmalar yürütmekteyiz.
+                        
+                        Dijital Kardiyoloji Derneği olarak, bilimsel araştırmaların ve yenilikçi teknolojilerin sağlık alanındaki uygulamalarını destekleyerek, kardiyoloji pratiğinde kalite ve etkinliği artırmayı hedefliyoruz.
+            </div>
+            </p>
+            </div>
+          </div>
+        </div>
+          <!-- Ana İçerik -->
+          
+        
+          <!-- Footer -->
+          <footer class="bg-dark text-white py-4">
+            <div class="container text-center">
+              <p>&copy; 2024 Dijital kardiyoloji derneği. Tüm hakları saklıdır.</p>
+            </div>
+          </footer>
+
+    </div>
+
+
+
+</div>    
+
+
+  <!-- Bootstrap JS ve gerekli dosyalar -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" crossorigin="anonymous"></script>
+
+  
+
+  {% endblock %}

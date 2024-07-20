@@ -1,0 +1,74 @@
+
+
+
+
+{% extends 'base.html' %}
+
+
+
+{% block body %}
+
+<style>
+    body {
+        background-color: white;
+    }
+    .messages {
+        list-style-type: none;
+        padding: 0;
+    }
+    .messages li {
+        color: black;
+        font-weight: bold; /* Optional: Apply bold font weight */
+        /* Add any other styles you need */
+    }
+    .container {
+        margin-top: 10px;
+    }
+    .header {
+        color: black;
+        background-color: cornsilk;
+    }
+    .details {
+        background-color: azure;
+        padding: 20px;
+    }
+    .kullanıcı{
+        background-color:indianred;
+        color:white;
+        font-weight: bold;
+    }
+</style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="header">Kullanıcı detayları</h1>
+                <div class="details">
+                    {% if messages %}
+                        <ul class="messages">
+                            {% for message in messages %}
+                                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    
+
+            <div class="col-md-12 kullanıcı">
+                <p>Ad, Soyad: {{ post.inputName }} {{ post.inputSurname }}</p>
+                <p>Yaş: {{ post.inputAge }}</p>
+                <p>Cinsiyet: {{ post.inputGender }}</p>
+                <p>Kullanıcı adı: {{ post.inputUsername }}</p>
+            </div>
+        </div>
+    </div>
+
+
+
+       
+
+{% endblock %}

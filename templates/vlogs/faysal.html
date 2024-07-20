@@ -1,0 +1,136 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome for icons (optional) -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://db.onlinewebfonts.com/c/4155571407c419f8dacc44846fbe2e79?family=Acta+Display+W04+ExtraBold" rel="stylesheet" type="text/css"/>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <title>Document</title>
+
+
+
+
+{% block body %}
+
+
+<style>
+    .vertical-line {
+      position: absolute;
+      top: 5px;
+      bottom: 5px;
+      left: 100%;
+      transform: translateX(-50%);
+      width: 2px;
+      background-color: #000; /* Black color for the vertical line */
+      opacity: 0.5; /* Muted appearance */
+    }
+
+    .card-img-wrapper {
+      position: relative;
+      height: 100%; /* Ensure the wrapper takes full height */
+    }
+
+    .card-img-wrapper img {
+      position: absolute;
+      top: 50%; /* Center the image vertically */
+      left: 50%; /* Center the image horizontally */
+      transform: translate(-50%, -50%); /* Adjust for centering */
+      max-width: 100%; /* Ensure image fits inside the container */
+      max-height: 100%; /* Ensure image fits inside the container */
+    }
+
+    body, h1, h2, h5, p, .navbar-nav a, .dropdown-menu a, .form-control {
+        font-family: 'Arial', sans-serif;
+    }    
+  </style>
+
+
+
+  <div class="container" style="background-color: aliceblue; margin-top: 20px;">
+    <div class="row">
+      <div class="col-lg-3" style="position: relative;">
+
+        <!-- Inserted card structure -->
+        <div class="card shadow-sm mt-3" style="background-color: antiquewhite;">
+          <div class="row g-0">
+            <div class="col-md-6 position-relative">
+              <!-- Image on the left 30% -->
+              <div class="card-img-wrapper">
+                <img src="{% static 'img/faysal.png' %}" class="card-img-top rounded-circle" alt="..." style="width: 120px; height: 130px; object-fit: cover;">
+              </div>
+              <!-- Vertical line -->
+              <div class="vertical-line"></div>
+            </div>
+            <div class="col-md-6">
+              <!-- Text content on the right 70% -->
+              <div class="card-body">
+                <h5 class="card-title">Dr Faysal Şaylık</h5>
+                <p class="card-text" style="color:#AB0033;font-size:12px">DİKA başkan yardımcısı</p>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End of inserted card -->
+      </div>
+      <div class="col-lg-9">
+        <h4 class="font-weight-bold" style="color: black; margin-top: 20px;">Yapay Zekanın Geldiği Nokta: Bugün ve Gelecek Perspektifinden Bakış</h4>
+        <p class="lead text-justify" style="color: black;">
+          
+
+          Yapay zeka, son yıllarda hızla gelişen ve teknoloji dünyasında büyük bir etki yaratan bir alan haline geldi. Peki, yapay zeka şu an hangi noktada ve gelecekte bizi neler bekliyor? <br><br>
+          
+          <span class="fw-bold">Yapay Zeka Nedir ve Neden Önemlidir? </span> <br>
+          
+          Öncelikle yapay zekanın ne olduğunu anlamak önemlidir. Yapay zeka, bilgisayarların insan benzeri yetenekler kazanması amacıyla tasarlanan bir teknoloji alanıdır. Makine öğrenmesi ve derin öğrenme gibi alt alanlar sayesinde, bilgisayarlar veri analizi yapabilir, desenleri tanıyabilir, önerilerde bulunabilir ve hatta kararlar alabilir hale gelmiştir. Bu, birçok sektörde verimliliği artırma, yeni keşifler yapma ve insanların hayatını kolaylaştırma potansiyeli sunar. <br><br>
+          
+          <span class="fw-bold">Günümüzde Yapay Zeka Uygulamaları</span> <br>
+          
+          Bugün yapay zeka, sağlık, otomotiv, finans, eğitim, perakende ve daha birçok sektörde çeşitli uygulamalara sahiptir. Örneğin: <br>
+          
+          Sağlık: Teşhis ve tedavi süreçlerinde yapay zeka kullanılarak hastalıkların erken teşhis edilmesi ve tedavi yöntemlerinin iyileştirilmesi sağlanabilir. <br>
+          
+          Otomotiv: Otonom araç teknolojileri sayesinde yapay zeka, sürücüsüz araçların güvenli bir şekilde hareket etmesini sağlar. <br>
+          
+          Finans: Risk analizi, portföy yönetimi ve müşteri ilişkileri yönetimi gibi alanlarda yapay zeka kullanılarak karar alma süreçleri optimize edilir. <br><br>
+          
+          <span class="fw-bold">Yapay Zeka ve Etik Sorunlar</span>  <br>
+          
+          Ancak, yapay zeka kullanımının artmasıyla birlikte bazı önemli etik sorunlar da ortaya çıkmaktadır. Örneğin, veri gizliliği, otomasyonun iş gücü üzerindeki etkisi, önyargılı algoritmalar ve insansı karar alma süreçlerindeki sorumluluklar gibi konular önemli tartışma noktaları oluşturmaktadır. <br><br>
+          
+          <span class="fw-bold">Gelecekte Yapay Zeka</span> <br>
+          
+          Gelecekte yapay zeka, daha da entegre edilmiş ve insan yaşamının her alanına yayılmış bir şekilde karşımıza çıkacak gibi görünüyor. Örneğin, akıllı şehirler, kişisel sağlık asistanları, eğitimde özelleştirilmiş öğrenme deneyimleri ve sanayide üretim süreçlerinin tamamen otomasyonu gibi alanlarda büyük potansiyel taşımaktadır. <br><br>
+          
+          <span class="fw-bold">Sonuç</span> <br>
+          
+          Yapay zeka, günümüzde çok büyük bir hızla gelişen ve ilerleyen bir teknoloji alanıdır. Hem fırsatlar sunması hem de beraberinde getirdiği sorumluluklar nedeniyle dikkatle yönetilmesi gereken bir alan olarak önümüzdeki yıllarda da hayatımızın merkezinde olmaya devam edecektir.
+           
+        </p>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

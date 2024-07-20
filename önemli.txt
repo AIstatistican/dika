@@ -1,0 +1,42 @@
+Burada django yu çalıştırmak için her seferinde virtual env açman gerekir onun için önce virtual env kuruyorsun
+
+1) önce cd 'den django klasörüne gidiyorsun
+2) sonra 'virtualenv newenv' bu kodu çalıştırmak
+3) sonra 'source newenv/bin/activate' bu kodu çalıştırmak
+4) sonra 'python manage.py runserver' bununla artık server başlatabilirsin.
+5) venv den çıkmak için 'deactivate' kullanmak gerek.
+
+
+Migrate komutu:
+python manage.py migrate
+
+
+
+admin arayüzüne ulaşmak için web browser internet tarayıcısında /admin yazıyorsun ve admin kullanıcı arayüzüen ulaşıyorsun./admin kısmını url dosyasında belirledik.
+
+
+admin kullanıcısı oluşturmak için :
+'python manage.py createsuperuser'  ile oluşturabilirsin.
+
+
+
+django da password sıfırlarken eğer;
+SSLCertVerificationError at /password_reset/
+[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)
+
+böyle bir hata alıyorsan şunu yap;
+Once upon a time I stumbled with this issue. If you're using macOS go to Macintosh HD > Applications > Python3.6 folder (or whatever version of python you're using) > double click on "Install Certificates.command" file.
+
+
+Yine; eğer :
+SMTPAuthenticationError at /password_reset/
+(535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-367cde89133sm8149469f8f.54 - gsmtp')
+
+böyle bir hata alıyorsan o zaman gmail senin erişimine izin vermiyor ya Daha Az Güvenli Uygulama Erişimini Açma: Güvenlik risklerini anladığınızı ve devam etmek istediğinizi düşünüyorsanız, bu seçeneği açabilirsiniz. Ancak, bu durum hesabınızın güvenliğini azaltabilir.
+    
+Yada ben de çalışan yöntem gmail de 2 güvenlikli doğrulamayı açtıktan sonra uygulama için şifre alı seçiyorsun. Sonra uygulama ismine ben mesela dika 
+yazdım ve sana 16 haneli kod üretiyor. Ama kodu 4 hane li ve aralarda boşluk bırakarak veriyor sen aradaki boşlukları çıkar ve toplam 16 hane olacak şekilde bitişik yaz. 
+
+
+normalde font-family base.hmtl de 
+style="font-family:'Acta Display Book'

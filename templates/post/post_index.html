@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{#post/{{post.id}}"> {{ post.title}}#}
+{#{% path 'detail' id=post.id %}#}
+
+
+{% block body %}    
+<style>
+    body{
+        background-color: #AB0033;
+    
+    }
+
+ 
+</style>
+        <h1>Merhaba burası post index sayfası</h1>
+
+        {% for post in posts %}
+            {{post.id}} <br>
+            <a href= "{{post.get_absolute_url}}"> {{ post.title}} </a><br>
+            {{ post.content}} <br>
+            {{ post.publishing_date}} <br> 
+        {% endfor %}
+
+{% endblock %}
+

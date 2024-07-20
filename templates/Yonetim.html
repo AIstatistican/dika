@@ -1,0 +1,782 @@
+{% extends 'base.html' %}
+
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome for icons (optional) -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://db.onlinewebfonts.com/c/4155571407c419f8dacc44846fbe2e79?family=Acta+Display+W04+ExtraBold" rel="stylesheet" type="text/css"/>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    integrity="sha512-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <title>Document</title>
+
+  {% block body %}
+
+  <style>
+    .person {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .person img {
+      max-width: 100%;
+      height: 120px;
+      border-radius: 40%;
+      margin-bottom: 10px;
+      margin-top:10px;
+    }
+    .president {
+      background-color: #007bff;
+      color: #fff;
+    }
+    .vp {
+      background-color: #28a745;
+      color: #fff;
+    }
+    .secretary {
+      background-color: #ffc107;
+      color: #000;
+    }
+    .member {
+      background-color: #17a2b8;
+      color: #fff;
+    }
+
+
+
+    body {
+            font-family: Arial, sans-serif;
+        }
+        .personal-info, .profile-pic {
+            background-color: #013D6F;
+            color: white;
+        }
+        .personal-info {
+            padding: 20px;
+        }
+        .profile-pic img {
+            width: 100%;
+            border-radius: 50%;
+        }
+        .main-content {
+            padding: 20px;
+        }
+        .header {
+            background-color:wheat;
+            color:black;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .section-title {
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        .section-divider {
+      border-top: 5px solid #000; /* Black border */
+      margin: 20px 25px 20px 15px; /* Space above the line */
+      
+      /* Space below the line */
+    }
+
+    body, h1, h2, h5, p, .navbar-nav a, .dropdown-menu a, .form-control {
+        font-family: 'Arial', sans-serif;
+    }
+   
+  </style>
+</head>
+<body>
+
+
+  <div class="container mt-5">
+    
+      <h1 class="fw-bold fs-1 text-center " style="color:black" > Yönetim Kurulu</h1> 
+  
+
+    <div class="row">
+      <!-- President -->
+      <div class="col-lg-12 text-center">
+        <div class="person president">
+          <img src="{% static 'img/ibrahim2.png' %}" alt="President" class="img-fluid">
+          <h4 class="fs-2">Başkan</h4>
+          <p class="fs-4">Prof. Dr. İbrahim Halil Tanboğa</p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <!-- Vice Presidents -->
+      <div class="col-lg-6 text-center">
+        <div class="person vp">
+          <img src="{% static 'img/faysal.png' %}" alt="Vice President" class="img-fluid">
+          <h4 class="fs-3">Başkan Yardımcısı</h4>
+          <p class="fs-5">Doç. Dr. Faysal Şaylık</p>
+        </div>
+      </div>
+      <div class="col-lg-6 text-center">
+        <div class="person vp">
+          <img src="{% static 'img/taylan.jpg' %}" alt="Vice President" class="img-fluid">
+          <h4 class="fs-3">Başkan Yardımcısı</h4>
+          <p class="fs-5">Prof. Dr. Taylan Akgün</p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <!-- Secretary -->
+      <div class="col-lg-12 text-center">
+        <div class="person secretary">
+          <img src="{% static 'img/süleyman.png' %}" alt="Secretary" class="img-fluid">
+          <h4 class="fs-3">Sekreter</h4>
+          <p class="fs-5">Doç. Dr. Süleyman Çağan Efe</p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <!-- Members -->
+      <div class="col-lg-4 text-center">
+        <div class="person member">
+          <img src="{% static 'img/aslan.png' %}" alt="Member" class="img-fluid">
+          <h4 class="fs-3">Üye</h4>
+          <p class="fs-5">Uz. Dr. Arslan Erdoğan</p>
+        </div>
+      </div>
+      <div class="col-lg-4 text-center">
+        <div class="person member">
+          <img src="{% static 'img/murat.jpg' %}" alt="Member" class="img-fluid">
+          <h4 class="fs-3">Sayman</h4>
+          <p class="fs-5">Doç. Dr. Murat Çap</p>
+        </div>
+      </div>
+      <div class="col-lg-4 text-center">
+        <div class="person member">
+          <img src="{% static 'img/selim.png' %}" alt="Member" class="img-fluid">
+          <h4 class="fs-3">Üye</h4>
+          <p class="fs-5">Doç. Dr. Selim Topçu</p>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row">
+
+          <h1 class="fs-1 fw-bolder text-center" style="color:sandybrown">Yönetim kurulu CV</h1>
+
+        </div>
+      </div>
+
+      <div class="container" style="margin:10px 15px 10px 15px ">
+        <div class="row">
+            <div class="col-md-4 personal-info">
+                <div class="profile-pic text-center mb-4">
+                    <img src="{% static 'img/ibrahim.jpg' %}" alt="Profile Picture">
+                </div>
+                <h2>Prof. Dr. İbrahim Halil Tanboğa</h2>
+
+                <hr>
+                <p><strong>Personal Information</strong></p>
+                <p>.....</p>
+                <p>İstanbul Nişantaşı Üniversitesi Kardiyoloji ve Biyoistatistik ABD </p>
+                <p>haliltanboga@yahoo.com</p>
+                
+                <hr>
+                <p><strong>Specializations</strong></p>
+                <ul>
+                    <li>İnvaziv kardiyoloji</li>
+                    <li>Biyoistatistik</li>
+                    <li>Yapay zeka</li>
+                    <li>Metodoloji</li>
+                </ul>
+                <hr>
+                <p><strong>Skills</strong></p>
+                <ul>
+                    <li>---</li>
+                    <li>---</li>
+                    <li>---</li>
+                    <li>---</li>
+                    <li>---</li>
+                    <li>---</li>
+                    <li>---</li>
+                </ul>
+                <hr>
+                <p><strong>Yabancı diller</strong></p>
+                <p>İngilizce</p>
+            </div>
+            <div class="col-md-8 main-content" style="background-color:#17a2b8;">
+                <div class="header">
+                    <h2>Prof Dr İbrahim Halil Tanboğa</h2>
+                    <p class="fs-5 fw-bold">Hakkımda</p>
+                    <p class="fs-5 text-justify">Nişantaşı Üniversitesi Tıp Fakültesi Kardiyoloji ve Biyoistatistik Anabilimdalı başkanlığı görevini yürütmekte olup, aynı zamanda Hisar intercontinental hospital'de kardiyoloji bölümünde çalışmaktadır. Temel ilgi alanları, kardiyovasküler bilimsel araştırma tasarımı ve analizi olup, SCI ve SCI-expanded hakemli dergilerde >200 bilimsel makalesi mevcuttur (H-index:38). 2009 yılında Kardiyoloji ihtisasını Koşuyolu kalp hastanesinde, 2021 yılında Biyoistatistik doktorasını Atatürk üniversitesinde tamamlamıştır. Halen, Nişantaşı üniversitesinde Yapay zeka mühendisliği yüksek lisans öğrencidir.</p>
+                </div>
+                <div >
+                    <h3 class="section-title">Çalışma deneyimleri</h3>
+                    <p>---</p>
+                    <p>---</p>
+                    <ul>
+                        <li>---</li>
+                        <li>---</li>
+                        <li>---</li>
+                    </ul>
+                    <p>---</p>
+                    <p>---</p>
+                    <ul>
+                        <li>---</li>
+                        <li>---</li>
+                        <li>---</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="section-title">Eğitim hayatı</h3>
+                    <p>-</p>
+                    <p>-</p>
+                    <p>-</p>
+                    <p>-</p>
+                    <p>-</p>
+                    <p>-</p>
+                    <p>-</p>
+                    <p>-</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+
+    <div class="row section-divider"></div> 
+
+
+
+
+    <div class="container" style="margin:10px 15px 10px 15px ">
+      <div class="row">
+          <div class="col-md-4 personal-info">
+              <div class="profile-pic text-center mb-4">
+                  <img src="{% static 'img/faysal.png' %}" alt="Profile Picture">
+              </div>
+              <h2>Doç. Dr. Faysal Şaylık</h2>
+
+              <hr>
+              <p><strong>Personal Information</strong></p>
+              <p>.....</p>
+              <p>SBÜ Van Eğitim ve Araştırma Hastanesi Kardiyoloji Kliniği  </p>
+              <p>faysalsaylik@gmail.com</p>
+              
+              <hr>
+              <p><strong>Specializations</strong></p>
+              <ul>
+                  <li>Yapay zeka</li>
+                  <li>Biyoistatistik</li>
+                  <li>Makine öğrenimi</li>
+                  <li>Web tasarım</li>
+                  <li>Kardiyak görüntüleme</li>
+              </ul>
+              <hr>
+              <p><strong>Skills</strong></p>
+              <ul>
+                  <li>...</li>
+                  <li>...</li>
+                  <li>...</li>
+                  <li>...</li>
+                  <li>...</li>
+                  <li>...</li>
+                  <li>...</li>
+              </ul>
+              <hr>
+              <p><strong>Yabancı diller</strong></p>
+              <p>İngilizce</p>
+          </div>
+          <div class="col-md-8 main-content" style="background-color:#17a2b8;">
+              <div class="header">
+                  <h2>Doç Dr. Faysal Şaylık</h2>
+                  <p class="fs-5 fw-bold">Hakkımda</p>
+                  <p class="fs-5 text-justify">S.B.Ü. Van Eğitim ve Araştırma Hastanesinde kardiyoloji kliniğinde öğretim üyesi olarak görev yapmaktadır.Temel ilgi alanları, yapay zeka, machine learning, biyoistatistik,  ve kardiyak görüntüleme olup, yurt içi ve yurt dışı dergilerde yayınlanmış > 70 bilimsel makalesi, meta-analizleri ve kongrelerde sunulmuş birçok sözlü bildirisi mevcuttur ( H-index:11). Kardiyoloji ihtisasını 2013 yılında Erzurum Atatürk üniversitesinde tamamlamış, 2023 yılında kardiyoloji alanında doçent ünvanına sahip olmuştur.  İyi derecede Pyhton, R, SAS, Javascript, programlama dilleri bilmektedir.   </p>
+              </div>
+              <div >
+                  <h3 class="section-title">Çalışma deneyimleri</h3>
+                  <p>...</p>
+                  <p>...</p>
+                  <ul>
+                      <li>...</li>
+                      <li>...</li>
+                      <li>...</li>
+                  </ul>
+                  <p>...</p>
+                  <p>...</p>
+                  <ul>
+                      <li>...</li>
+                      <li>...</li>
+                      <li>...</li>
+                  </ul>
+              </div>
+              <div>
+                  <h3 class="section-title">Eğitim hayatı</h3>
+                  <p>...</p>
+                  <p>...</p>
+                  <p>...</p>
+                  <p>...</p>
+                  <p>...</p>
+                  <p>...</p>
+                  <p>...</p>
+                  <p>...</p>
+              </div>
+          </div>
+      </div>
+  </div> 
+
+
+  <div class="row section-divider"></div> 
+
+
+
+
+  <div class="container" style="margin:10px 15px 10px 15px ">
+    <div class="row">
+        <div class="col-md-4 personal-info">
+            <div class="profile-pic text-center mb-4">
+                <img src="{% static 'img/taylan.jpg' %}" alt="Profile Picture">
+            </div>
+            <h2>Prof. Dr. Taylan Akgün</h2>
+
+            <hr>
+            <p><strong>Personal Information</strong></p>
+            <p>...</p>
+            <p>... </p>
+            <p>.../p>
+            
+            <hr>
+            <p><strong>Specializations</strong></p>
+            <ul>
+                <li>Aritmi</li>
+                <li>...</li>
+                <li>...</li>
+                <li>...</li>
+                <li>...</li>
+            </ul>
+            <hr>
+            <p><strong>Skills</strong></p>
+            <ul>
+                <li>...</li>
+                <li>...t</li>
+                <li>...</li>
+                <li>...</li>
+                <li>...</li>
+                <li>...</li>
+                <li>...</li>
+            </ul>
+            <hr>
+            <p><strong>Yabancı diller</strong></p>
+            <p>İngilizce</p>
+        </div>
+        <div class="col-md-8 main-content" style="background-color:#17a2b8;">
+            <div class="header">
+                <h2>Prof. Dr. Taylan Akgün</h2>
+                <p class="fs-5 fw-bold">Hakkımda</p>
+                <p class="fs-5 text-justify">Sağlık Bilimleri Üniversitesi Tıp Fakültesi Başakşehir çam ve Sakura Şehir Hastanesi Kardiyoloji anabilimdalında görevini yürütmekte olup, aynı zamanda Elektrofizyoloji departman sorumlusu olarak çalışmaktadır. Temel ilgi alanları, elektrofizyoloji ve aritmi bilimsel araştırma tasarımı ve analizi olup, SCI ve SCI-expanded hakemli dergilerde >100 bilimsel makalesi mevcuttur (H-index:29). 2008 yılında Kardiyoloji ihtisasını Koşuyolu kalp hastanesinde, 2014 yılında kardiyoloji doçenti ve 2021 de kardiyoloji profesörü ünvanını almıştır. Kalp ve damar hastalıklarında dijital proje geliştirme ve çözüm önerileri sunma, ve kardiyolojide yapay zeka uygulamaları temel ilgi alanları arasında yer almaktadır.</p>
+            </div>
+            <div >
+                <h3 class="section-title">Çalışma deneyimleri</h3>
+                <p>...</p>
+                <p>...</p>
+                <ul>
+                    <li>...</li>
+                    <li>...</li>
+                    <li>...</li>
+                </ul>
+                <p>...</p>
+                <p>...</p>
+                <ul>
+                    <li>...</li>
+                    <li>...</li>
+                    <li>...</li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="section-title">Eğitim hayatı</h3>
+                <p>...</p>
+                <p>...</p>
+                <p>...</p>
+                <p>...</p>
+                <p>...</p>
+                <p>...</p>
+                <p>...</p>
+                <p>...</p>
+            </div>
+        </div>
+    </div>
+</div> 
+<div class="row section-divider"></div> 
+
+
+
+
+    <div class="container" style="margin:10px 15px 10px 15px ">
+      <div class="row">
+          <div class="col-md-4 personal-info">
+              <div class="profile-pic text-center mb-4">
+                  <img src="{% static 'img/suleyman.png' %}" alt="Profile Picture">
+              </div>
+              <h2>Doç. Dr. Süleyman Çağan Efe</h2>
+
+              <hr>
+              <p><strong>Personal Information</strong></p>
+              <p>...</p>
+              <p>S.B.Ü. Kartal Koşuyolu Eğitim ve Araştırma Hastanesi Kardiyoloji Kliniği </p>
+              <p>...</p>
+              
+              <hr>
+              <p><strong>Specializations</strong></p>
+              <ul>
+                  <li>...</li>
+                  <li>...</li>
+                  <li>...</li>
+                  <li>...</li>
+                  <li>...</li>
+              </ul>
+              <hr>
+              <p><strong>Skills</strong></p>
+              <ul>
+                  <li>...</li>
+                  <li>...</li>
+                  <li>...</li>
+                  <li>...</li>
+                  <li>.../li>
+                  <li>...</li>
+                  <li>...</li>
+              </ul>
+              <hr>
+              <p><strong>Yabancı diller</strong></p>
+              <p>İngilizce</p>
+          </div>
+          <div class="col-md-8 main-content" style="background-color:#17a2b8;">
+              <div class="header">
+                  <h2>Doç. Dr. Süleyman Çağan Efe</h2>
+                  <p class="fs-5 fw-bold">Hakkımda</p>
+                  <p class="fs-5 text-justify">Sağlık Bilimleri Üniversitesi Kartal Koşuyolu Eğitim ve Araştırma Hastanesinde kardiyoloji biriminde öğretim üyesi olarak çalışmaktadır. 2010 yılında Ankara Üniversitesi Tıp Fakültesinden mezun olmuştur. 2015 yılında kardiyoloji ihtisasını Kartal Koşuyolu Eğitim ve Araştırma Hastanesinde tamamlamıştır. 2022 yılında kardiyoloji doçenti ünvanı almıştır. Ilgi alanları kalp yetersizliği , mekanik destek cihazları , girişimsel kardiyoloji ve tıbbi istatistiktir. SCI , SCI expanded ve uluslararası hakemli dergilerde yayınlanmış 100’ün üzerinde makalesi bulunmaktadır( h index 12 ). </p>
+              </div>
+              <div >
+                <h3 class="section-title">Çalışma deneyimleri</h3>
+                <p>...</p>
+                <p>...</p>
+                <ul>
+                    <li>...</li>
+                    <li>...</li>
+                    <li>...</li>
+                </ul>
+                <p>...</p>
+                <p>...</p>
+                <ul>
+                    <li>...</li>
+                    <li>...</li>
+                    <li>...</li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="section-title">Eğitim hayatı</h3>
+                <p>...</p>
+                <p>...</p>
+                <p>...</p>
+                <p>...</p>
+                <p>...</p>
+                <p>...</p>
+                <p>...</p>
+                <p>...</p>
+            </div>
+        </div>
+    </div>
+</div> 
+
+
+
+  <div class="row section-divider"></div> 
+
+
+
+
+    <div class="container" style="margin:10px 15px 10px 15px ">
+      <div class="row">
+          <div class="col-md-4 personal-info">
+              <div class="profile-pic text-center mb-4">
+                  <img src="{% static 'img/aslan.png' %}" alt="Profile Picture">
+              </div>
+              <h2>Uz. Dr. Arslan Erdoğan</h2>
+
+              <hr>
+              <p><strong>Personal Information</strong></p>
+              <p>...</p>
+              <p>S.B.Ü. Çam Sakura Şehir Hastanesi Kardiyoloji Kliniği</p>
+              <p>...</p>
+              
+              <hr>
+              <p><strong>Specializations</strong></p>
+              <ul>
+                  <li>...</li>
+                  <li>...</li>
+                  <li>...</li>
+                  <li>...</li>
+                  <li>...</li>
+              </ul>
+              <hr>
+              <p><strong>Skills</strong></p>
+              <ul>
+                  <li>...</li>
+                  <li>...</li>
+                  <li>...</li>
+                  <li>...</li>
+                  <li>...</li>
+                  <li>...</li>
+                  <li>...</li>
+              </ul>
+              <hr>
+              <p><strong>Yabancı diller</strong></p>
+              <p>İngilizce</p>
+          </div>
+          <div class="col-md-8 main-content" style="background-color:#17a2b8;">
+              <div class="header">
+                  <h2>Uz. Dr. Aslan Erdoğan</h2>
+                  <p class="fs-5 fw-bold">Hakkımda</p>
+                  <p class="fs-5 text-justify">S.B.Ü. Çam Sakura Şehir Hastanesi kardiyoloji kliniğinde  görevini yürütmekte olup, invaziv kardiyoloji alanında çalışmalar yürütmektedir. İlgi alanları klinik araştırmalar, biyoistatistik ve hasta yönetiminde dijital proje geliştirmektir. Ulusal ve uluslararası dergilerde  bilimsel makaleleri  mevcuttur. 2011 yılında Çukurova Üniversitesi Tıp Fakültesi , 2017 Kartal Kosuyolu  kalp hastanesinde ihtisasını tamamlamıştır.</p>
+              </div>
+              <div >
+                <h3 class="section-title">Çalışma deneyimleri</h3>
+                <p>...</p>
+                <p>...</p>
+                <ul>
+                    <li>...</li>
+                    <li>...</li>
+                    <li>...</li>
+                </ul>
+                <p>...</p>
+                <p>...</p>
+                <ul>
+                    <li>...</li>
+                    <li>...</li>
+                    <li>...</li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="section-title">Eğitim hayatı</h3>
+                <p>...</p>
+                <p>...</p>
+                <p>...</p>
+                <p>...</p>
+                <p>...</p>
+                <p>...</p>
+                <p>...</p>
+                <p>...</p>
+            </div>
+        </div>
+    </div>
+</div> 
+
+
+
+  <div class="row section-divider"></div> 
+
+
+
+
+    <div class="container" style="margin:10px 15px 10px 15px ">
+      <div class="row">
+          <div class="col-md-4 personal-info">
+              <div class="profile-pic text-center mb-4">
+                  <img src="{% static 'img/murat.jpg' %}" alt="Profile Picture">
+              </div>
+              <h2>Doç. Dr. Murat Çap</h2>
+
+              <hr>
+              <p><strong>Personal Information</strong></p>
+              <p>....</p>
+              <p>S.B.Ü. Diyarbakır Gazi Yaşargil Uygulama ve Araştırma Hastanesi Kardiyoloji A.B.D.  </p>
+              <p>...</p>
+              
+              <hr>
+              <p><strong>Specializations</strong></p>
+              <ul>
+                  <li>...</li>
+                  <li>...</li>
+                  <li>...</li>
+                  <li>...</li>
+                  <li>...</li>
+              </ul>
+              <hr>
+              <p><strong>Skills</strong></p>
+              <ul>
+                  <li>...</li>
+                  <li>...</li>
+                  <li>...</li>
+                  <li>...</li>
+                  <li>...</li>
+                  <li>...</li>
+                  <li></li>
+              </ul>
+              <hr>
+              <p><strong>Yabancı diller</strong></p>
+              <p>İngilizce</p>
+          </div>
+          <div class="col-md-8 main-content" style="background-color:#17a2b8;">
+              <div class="header">
+                  <h2>Doç. Dr. Murat Çap</h2>
+                  <p class="fs-5 fw-bold">Hakkımda</p>
+                  <p class="fs-5 text-justify">Sağlık Bilimleri Üniversitesi Diyarbakır Gazi Yaşargil Sağlık uygulama ve Araştırma merkezinde kardiyoloji anabilimdalında görev yapmaktadır. Temeli ilgi alanları yapısal kalp hastalıkları ve intrakoroner görüntüleme üzerine olup çok sayıda uluslararası çalışmada araştırmacı olarak yer almaktadır. SCI ve SCI-expanded hakemli dergilerde yaklaşık 40 makalesi mevcuttur. Kardiyoloji ihtisasını 2015 yılında Kartal Koşuyolu Yüksek İhtisas Eğitim ve Araştırma Hastanesinde tamamlamıştır. 2018 yılından beri Diyarbakır Gazi Yaşargil Eğitim ve Araştırma Hastanesinde Kardiyoloji Anabilimdalında çalışmaktadır. Eylül 2022- Mayıs 2023 tarihleri arasında Londra Barts Heart Center da intravasküler görüntüleme ve yapısal kalp hastalıkları üzerine gözlemci olarak çalışmış olup, aynı tarihlerde Queen Mary Üniversitesi William Harvey Research Institute, Cardiovascular Medicine and Devices Center’da research fellow olarak intravasküler görüntüleme(IVUS, OCT), computational fluid dynamic ve 3D kantitatif koroner anjiografi ile ilgili analizler yaparak makine öğrenimi ve tıbbi yazılımların performansının değerlendirildiği çok sayıda çalışmada görev almıştır.</p>
+              </div>
+              <div >
+                <h3 class="section-title">Çalışma deneyimleri</h3>
+                <p>...</p>
+                <p>...</p>
+                <ul>
+                    <li>...</li>
+                    <li>...</li>
+                    <li>...</li>
+                </ul>
+                <p>...</p>
+                <p>...</p>
+                <ul>
+                    <li>...</li>
+                    <li>...</li>
+                    <li>...</li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="section-title">Eğitim hayatı</h3>
+                <p>...</p>
+                <p>...</p>
+                <p>...</p>
+                <p>...</p>
+                <p>...</p>
+                <p>...</p>
+                <p>...</p>
+                <p>...</p>
+            </div>
+        </div>
+    </div>
+</div> 
+
+
+
+  <div class="row section-divider"></div> 
+
+
+
+
+    <div class="container" style="margin:10px 15px 10px 15px ">
+      <div class="row">
+          <div class="col-md-4 personal-info">
+              <div class="profile-pic text-center mb-4">
+                  <img src="{% static 'img/selim.png' %}" alt="Profile Picture">
+              </div>
+              <h2>Doç. Dr. Selim Topçu</h2>
+
+              <hr>
+              <p><strong>Personal Information</strong></p>
+              <p>...</p>
+              <p>... </p>
+              <p>...</p>
+              
+              <hr>
+              <p><strong>Specializations</strong></p>
+              <ul>
+                  <li>...</li>
+                  <li>...</li>
+                  <li>...</li>
+                  <li>...</li>
+                  <li>...</li>
+              </ul>
+              <hr>
+              <p><strong>Skills</strong></p>
+              <ul>
+                  <li>...</li>
+                  <li>...</li>
+                  <li>...</li>
+                  <li>...</li>
+                  <li>...</li>
+                  <li>...</li>
+                  <li>...</li>
+              </ul>
+              <hr>
+              <p><strong>Yabancı diller</strong></p>
+              <p>İngilizce</p>
+          </div>
+          <div class="col-md-8 main-content" style="background-color:#17a2b8;">
+              <div class="header">
+                  <h2>Doç. Dr. Selim Topçu</h2>
+                  <p class="fs-5 fw-bold">Hakkımda</p>
+                  <p class="fs-5 text-justify">Nişantaşı Üniversitesi Tıp Fakültesi Biyoistatistik Anabilim dalında öğretim üyesi olarak çalışmakta olup, aynı zamanda Emsey hospital'de kardiyoloji bölümünde çalışmaktadır. Temel ilgi alanları, girişimsel kardiyoloji, veri bilimi ve biyoistatistik olan Selim Topcu”nun  SCI ve SCI-expanded hakemli dergilerde > 50 bilimsel makalesi mevcuttur (H-index:15).  2007 yılında Hacettepe Tıp Fakültesinden mezun olduktan sonra girdiği Atatürk Üniversitesi Kardiyoloji Anabilim dalından 2012 yılında Kardiyoloji uzmanlığını almıştır. İkinci uzmanlık alanı olarak Biyoistatistik doktorasını Atatürk üniversitesinde 2023 yılında tamamlamıştır.  Halen Nişantaşı Üniversitesi Tıp Fakültesinde biyoistatistik dersleri vermektedir.</p>
+              </div>
+              <div >
+                <h3 class="section-title">Çalışma deneyimleri</h3>
+                <p>...</p>
+                <p>...</p>
+                <ul>
+                    <li>...</li>
+                    <li>...</li>
+                    <li>...</li>
+                </ul>
+                <p>...</p>
+                <p>...</p>
+                <ul>
+                    <li>...</li>
+                    <li>...</li>
+                    <li>...</li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="section-title">Eğitim hayatı</h3>
+                <p>...</p>
+                <p>...</p>
+                <p>...</p>
+                <p>...</p>
+                <p>...</p>
+                <p>...</p>
+                <p>...</p>
+                <p>...</p>
+            </div>
+        </div>
+    </div>
+</div> 
+
+
+      <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+          <p>&copy; 2024 Dijital kardiyoloji derneği. Tüm hakları saklıdır.</p>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" crossorigin="anonymous"></script>
+
+  
+
+ 
+
+
+
+
+  
+
+  {% endblock %}

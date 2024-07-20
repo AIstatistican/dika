@@ -1,0 +1,136 @@
+{% extends 'base.html' %}
+
+
+{% load static %}
+
+{% block body %}
+
+
+
+<style>
+
+h4, h5{
+    font-family: Arial, sans-serif;
+} 
+
+li a{
+    color:black;
+}
+
+.bilim {
+        margin-bottom: 0px;/* Optional: Adjust spacing between list items */
+        transition: transform 0.5s ease; /* Smooth transition for transform */
+        
+    }
+
+.bilim:hover{
+    transform: scale(1.02);
+    color:black;
+    text-decoration: none;
+}
+
+.border-bottom {
+        border-bottom: 10px solid #AB0033; /* Border color and style */
+       /* Optional: Adjust spacing between items */
+    }
+
+    body, h1, h2, h5, p, .navbar-nav a, .dropdown-menu a, .form-control {
+        font-family: 'Arial', sans-serif;
+    }
+p {
+    margin-bottom: 0px;
+}
+
+</style>
+
+
+<div class="container" style="background-color:#FEFDFD; margin-top: 2rem; padding-left: 0px;">
+    <div class="row">
+        <div class="col-12 mb-4">
+
+            <ul style="list-style-type: none;">
+                <li>
+                  
+                        <h4 class="fw-bold"style="background-color: #AB0033; padding:15px 5px; color:white;">Bilim Kurulu (Scientific advisory board)</h4>
+                    
+                </li>
+                <li>
+                    <a href="https://dosya.sbu.edu.tr/CV/CIHANGIRKAYMAZ_2820.pdf" class="bilim">
+                        <h5 class="fw-bold bilim"style="background-color:#FEFDFD; padding:15px 5px;">Cihangir Kaymaz, MD,
+                        <p style="font-size: 12px;">University of Health Science (TR)</p>   
+                        </h5>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://experts.umich.edu/307-venk-murthy/about" class="bilim">
+                        <h5 class="fw-bold bilim"style="background-color:#ECECEC; padding:15px 5px;">Venkatesh Murthy, MD, PhD
+                        <p style="font-size: 12px;">Michigan University (US)</p>   
+                        </h5>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.crf.org/crf/news-and-events/news/news/3723-david-j-cohen-md-msc-joins-crf-as-director-of-clinical-and-outcomes-research-and-st-francis-hospital-as-director-of-academic-affairs" class="bilim">
+                        <h5 class="fw-bold bilim"style="background-color:#FEFDFD; padding:15px 5px;">David Cohen, MD, MSc
+                        <p style="font-size: 12px;">St. Francis Hospital (US)</p>       
+                        </h5>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://researchers.mgh.harvard.edu/profile/3296317/Edip-Gurol"class="bilim">
+                        <h5 class="fw-bold bilim"style="background-color: #ECECEC; padding:15px 5px;">Edip Gurol, MD
+                        <p style="font-size: 12px;">Harvard University (US)</p>           
+                        </h5>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://esc365.escardio.org/person/40463"class="bilim">
+                        <h5 class="fw-bold bilim"style="background-color: #FEFDFD; padding:15px 5px;">Christos Bourantas, MD, PhD
+                        <p style="font-size: 12px;">Queen Mary University of London (UK)</p>    
+                        </h5>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://connects.catalyst.harvard.edu/Profiles/display/Person/165341"class="bilim">
+                        <h5 class="fw-bold bilim"style="background-color: #ECECEC; padding:15px 5px;">Arzu Kalaycı, MD, MSc
+                        <p style="font-size: 12px;">Harvard University (US)</p>
+                        </h5>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.mskcc.org/profile/mithat-gonen"class="bilim">
+                        <h5 class="fw-bold bilim"style="background-color: #FEFDFD; padding:15px 5px;">Mithat Gonen, PhD
+                        <p style="font-size: 12px;">Memorial Sloan-Kettering Cancer Center (US)</p>
+                        </h5>
+                    </a>
+                </li>
+        
+                <li>
+                    <a href="https://akademik.yok.gov.tr/AkademikArama/view/viewAuthor.jsp"class="bilim">
+                        <h5 class="fw-bold bilim"style="background-color:#ECECEC; padding:15px 5px;">Soner Şahin, MD
+                        <p style="font-size: 12px;">Nişantaşı University (TR)</p>
+                        </h5>
+                    </a>
+                </li>
+                <li class="border-bottom" >
+                    <a href="https://avesis.medipol.edu.tr/gguler"class="bilim">
+                        <h5 class="fw-bold bilim"style="background-color: #FEFDFD; padding:15px 5px;">Gamze Babür Güler, MD
+                        <p style="font-size: 12px;">University of Health Science (TR)</p>
+                        </h5>
+                    </a>
+                </li>
+                <li class="border-bottom" >
+                    <a href="https://medicine.istinye.edu.tr/tr/kadro/21600"class="bilim">
+                        <h5 class="fw-bold bilim"style="background-color: #ECECEC; padding:15px 5px;">Tayyar Gökdeniz, MD
+                        <p style="font-size: 12px;">University of Istinye (TR)</p>
+                        </h5>
+                    </a>
+                </li>
+        
+        
+
+            </ul>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
