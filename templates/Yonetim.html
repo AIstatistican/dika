@@ -113,7 +113,7 @@
     height: 50px;
     border: none;
     outline: none;
-    background-color:#AB0033; /* Change button color as needed */
+    background-color: #AB0033; /* Change button color as needed */
     color: white;
     cursor: pointer;
     border-radius: 50%;
@@ -121,6 +121,7 @@
     display: flex;
     justify-content: center; /* Center align horizontally */
     align-items: center; /* Center align vertically */
+    transition: opacity 0.3s;
 }
 
 #scrollToTopBtn svg {
@@ -134,8 +135,16 @@
     transition: stroke 0.3s ease;
 }
 
-#scrollToTopBtn:hover svg {
-    stroke: white; /* Darker color on hover */
+#scrollToTopBtn:hover {
+    opacity: 0.8; /* Reduce opacity on hover */
+}
+
+@media (max-width: 768px) {
+    /* Adjust button position for smaller screens */
+    #scrollToTopBtn {
+        bottom: 10px;
+        right: 10px;
+    }
 }
    
   </style>
