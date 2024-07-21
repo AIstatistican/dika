@@ -102,6 +102,38 @@
     body, h1, h2, h5, p, .navbar-nav a, .dropdown-menu a, .form-control {
         font-family: 'Arial', sans-serif;
     }
+
+    #scrollToTopBtn {
+    display: none; /* Hide the button initially */
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99; /* Make sure it appears above other content */
+    width: 50px;
+    height: 50px;
+    border: none;
+    outline: none;
+    background-color:#AB0033; /* Change button color as needed */
+    color: white;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#scrollToTopBtn svg {
+    width: 30px; /* Adjust the size of the arrow icon */
+    height: 30px;
+    stroke-width: 2px; /* Stroke width of the SVG icon */
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none; /* Ensures the SVG icon does not inherit background color */
+    stroke: white; /* Color of the arrow icon */
+    transition: stroke 0.3s ease;
+}
+
+#scrollToTopBtn:hover svg {
+    stroke: #0056b3; /* Darker color on hover */
+}
    
   </style>
 </head>
@@ -761,6 +793,38 @@
       </footer>
     </div>
   </div>
+
+
+  <button id="scrollToTopBtn" title="Go to top">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-up">
+        <line x1="12" y1="19" x2="12" y2="5"></line>
+        <polyline points="5 12 12 5 19 12"></polyline>
+    </svg>
+</button>
+
+<script>
+  let scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+  // When the user scrolls down 20px from the top of the document, show the button
+  window.onscroll = function() {
+      scrollFunction();
+  };
+  
+  function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          scrollToTopBtn.style.display = "block";
+      } else {
+          scrollToTopBtn.style.display = "none";
+      }
+  }
+  
+  // When the user clicks on the button, scroll to the top of the document
+  scrollToTopBtn.addEventListener("click", function() {
+      document.body.scrollTop = 0; // For Safari
+      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+  });
+
+  </script>
 
   <!-- Bootstrap JS and dependencies -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"
