@@ -171,45 +171,6 @@ h6{
   font-family:Arial, Helvetica, sans-serif ; 
 }
 
-.carousel-caption {
-      position: absolute;
-      bottom: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-      text-align: center;
-      padding: 0 15px;
-    }
-
-    .carousel-caption h3, .carousel-caption h5 {
-      font-size: 1.5rem; /* Default size for larger screens */
-      font-weight: bold;
-      margin-bottom: 1rem;
-    }
-
-    .carousel-caption p {
-      font-size: 1rem; /* Default size for larger screens */
-    }
-
-    /* Responsive adjustments */
-    @media (max-width: 992px) {
-      .carousel-caption h3, .carousel-caption h5 {
-        font-size: 1.25rem; /* Smaller size for medium screens */
-      }
-
-      .carousel-caption p {
-        font-size: 0.875rem; /* Smaller size for medium screens */
-      }
-    }
-
-    @media (max-width: 576px) {
-      .carousel-caption h3, .carousel-caption h5 {
-        font-size: 1rem; /* Smaller size for small screens */
-      }
-
-      .carousel-caption p {
-        font-size: 0.75rem; /* Smaller size for small screens */
-      }
-    }
 
 
 /* Ensure the iframe doesn't capture mouse events */
@@ -225,7 +186,7 @@ h6{
             <a href="{% static 'img/toplanti.pdf' %}" target="_blank">
               <img src="{% static 'img/toplanti.jpg' %}" class="d-block w-100" alt="Image 1">
             </a>
-            <div class="carousel-caption d-none d-md-block">
+            <div class="carousel-caption d-none d-md-block" style="color:#173477; margin-bottom: 2rem;">
               
               <h3> Bilimsel program için tıklayınız </h3>
               <p class="fs-6" style="color:black"></p>
